@@ -19,6 +19,7 @@ exports.config = {
   },
   include: {
     I: './steps_file.js',
+
   },
   name: 'restaurant-apps+pwa+testing',
   plugins: {
