@@ -1,5 +1,4 @@
 const itActsAsFavoriteRestaurantModel = (favoriteRestaurant) => {
-
   it('should return the restaurant that has been added', async () => {
     favoriteRestaurant.putRestaurant({ id: 1 });
     favoriteRestaurant.putRestaurant({ id: 2 });

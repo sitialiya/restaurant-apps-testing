@@ -2,7 +2,6 @@
 
 // eslint-disable-next-line func-names
 module.exports = function () {
-
   return actor({
 
     // Define custom steps here, use 'this' to access default methods of I.
@@ -10,4 +9,3 @@ module.exports = function () {
 
   });
 };
-

@@ -15,14 +15,12 @@ describe('Unliking A restaurant', () => {
     await FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 
-
   it('should display unlike widget when the restaurant has been liked', async () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
     expect(document.querySelector('[aria-label="unlike this restaurant"]'))
       .toBeTruthy();
   });
-
 
   it('should not display like widget when the restaurant has been liked', async () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
@@ -47,4 +45,3 @@ describe('Unliking A restaurant', () => {
     expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
   });
 });
-
