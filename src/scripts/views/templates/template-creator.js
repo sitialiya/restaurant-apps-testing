@@ -6,8 +6,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurant__title" tabindex="4">${restaurant.name}</h2>
   <article class='restaurant-info'>
     <picture>
-      <source class="restaurant__image" media="(max-width: 500px)" srcset="${API_ENDPOINT.IMAGE.SMALL}${restaurant.pictureId}" alt="${restaurant.name}" type="image/jpeg" tabindex="4">
-      <source class="restaurant__image" media="(min-width: 1200px)" srcset="${API_ENDPOINT.IMAGE.LARGE}${restaurant.pictureId}" alt="${restaurant.name}" type="image/jpeg" tabindex="4">
+      <source class="restaurant__image" media="(max-width: 500px)" data-srcset="${API_ENDPOINT.IMAGE.SMALL}${restaurant.pictureId}" alt="${restaurant.name}" type="image/jpeg" tabindex="4">
+      <source class="restaurant__image" media="(min-width: 1200px)" data-srcset="${API_ENDPOINT.IMAGE.LARGE}${restaurant.pictureId}" alt="${restaurant.name}" type="image/jpeg" tabindex="4">
       <img class="restaurant__image lazyload" data-src="${API_ENDPOINT.IMAGE.MEDIUM}${restaurant.pictureId}" alt="${restaurant.name}" width="300" height="200" tabindex="4"/>
     </picture>
     <div class="restaurant__info">
@@ -42,8 +42,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurants) => `
   <article class="content-item">
     <picture>
-      <source class="restaurant__image" media="(max-width: 500px)" srcset="${API_ENDPOINT.IMAGE.SMALL}${restaurants.pictureId}" alt="${restaurants.name}" type="image/jpeg" tabindex="4">
-      <source class="restaurant__image" media="(min-width: 1200px)" srcset="${API_ENDPOINT.IMAGE.LARGE}${restaurants.pictureId}" alt="${restaurants.name}" type="image/jpeg" tabindex="4">
+      <source class="restaurant__image" media="(max-width: 500px)" data-srcset="${API_ENDPOINT.IMAGE.SMALL}${restaurants.pictureId}" alt="${restaurants.name}" type="image/jpeg" tabindex="4">
+      <source class="restaurant__image" media="(min-width: 1200px)" data-srcset="${API_ENDPOINT.IMAGE.LARGE}${restaurants.pictureId}" alt="${restaurants.name}" type="image/jpeg" tabindex="4">
       <img class="restaurant__image lazyload" data-src="${API_ENDPOINT.IMAGE.MEDIUM}${restaurants.pictureId}" alt="${restaurants.name}" width="300" height="200" tabindex="4"/>
     </picture>
     <p class='rating' tabindex="4">⭐️ ${restaurants.rating} </p>
